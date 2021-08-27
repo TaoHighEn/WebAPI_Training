@@ -14,12 +14,11 @@
                 <!-- Card body -->
                 <div class="card-body p-6">
                     <div class="mb-4">
-                        <a href="/"><img src="../assets/images/brand/logo/logo-primary.svg" class="mb-2" alt="農寶寶"></a>
-                        <p class="mb-6">請輸入帳號/密碼進行登入</p>
+                        <a href="../index.html"><img src="../assets/images/brand/logo/logo-primary.svg" class="mb-2" alt=""></a>
+                        <p class="mb-6">Please enter your user information.</p>
                     </div>
                     <!-- Form -->
                     <form asp-controller="Account" asp-action="Signin" method="post">
-
                         <input type="hidden" asp-for="ReturnUrl" />
                         <input type="hidden" asp-for="ErrorMessage" />
                         <span asp-validation-for="ErrorMessage" class="text-danger"></span>
@@ -54,19 +53,21 @@
                             <!-- Button -->
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary">
-                                    登入
+                                    Sign
+                                    in
                                 </button>
                             </div>
 
                             <div class="d-md-flex justify-content-between mt-4">
                                 <div class="mb-2 mb-md-0">
                                     <a href="sign-up.html" class="fs-5">
-                                        建立帳號
+                                        Create An
+                                        Account
                                     </a>
                                 </div>
                                 <div>
                                     <a href="forget-password.html" class="text-inherit
-                        fs-5">忘記密碼？</a>
+                        fs-5">Forgot your password?</a>
                                 </div>
 
                             </div>

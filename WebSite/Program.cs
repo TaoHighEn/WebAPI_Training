@@ -16,6 +16,7 @@ namespace WebSite
             CreateHostBuilder(args).Build().Run();
         }
 
+        //可能會有背景執行
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

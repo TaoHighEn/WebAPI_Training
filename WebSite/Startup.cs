@@ -25,6 +25,9 @@ namespace WebSite
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services 相依性注入 (DI)
+            //註冊
+
             services.AddControllersWithViews();
             // 使用 Cookie
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -59,9 +62,9 @@ namespace WebSite
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            //先驗證
             app.UseAuthentication();
-
+            //再授權
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
