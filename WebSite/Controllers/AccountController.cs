@@ -67,8 +67,8 @@ namespace WebSite.Controllers
                 //LINQ
                 var isExists = testUsers.Where(s => s.Account.ToLower() == model.Account.Trim().ToLower()
                     && s.Password == model.Password).Any();
-                if (!isExists)
-                    throw new Exception("帳號或密碼錯誤");
+                //if (!isExists)
+                    //throw new Exception("帳號或密碼錯誤");
 
                 // 設定 Cookie
                 var claims = new List<Claim>
@@ -78,6 +78,7 @@ namespace WebSite.Controllers
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
 
+                //await HttpContext.SignInAsync(new ClaimsPrincipal());
                 await HttpContext.SignInAsync(principal);
 
                 //沒有指定返回的頁面就導向 /Home/Index
