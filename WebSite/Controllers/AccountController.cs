@@ -67,9 +67,10 @@ namespace WebSite.Controllers
                 //LINQ
                 var isExists = testUsers.Where(s => s.Account.ToLower() == model.Account.Trim().ToLower()
                     && s.Password == model.Password).Any();
-                //if (!isExists)
-                    //throw new Exception("帳號或密碼錯誤");
-
+                if (!isExists)
+                {
+                    throw new Exception("帳號或密碼錯誤");
+                }
                 // 設定 Cookie
                 var claims = new List<Claim>
                 {
