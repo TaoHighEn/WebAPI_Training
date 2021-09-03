@@ -79,6 +79,25 @@ namespace WebSite.Controllers
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
 
+                //設定token驗證
+                //if (info.Principal.HasClaim(c => c.Type == ClaimTypes.GivenName))
+                //{
+                //    await _userManager.AddClaimAsync(user,
+                //        info.Principal.FindFirst(ClaimTypes.GivenName));
+                //}
+
+                //if (info.Principal.HasClaim(c => c.Type == "urn:google:locale"))
+                //{
+                //    await _userManager.AddClaimAsync(user,
+                //        info.Principal.FindFirst("urn:google:locale"));
+                //}
+
+                //if (info.Principal.HasClaim(c => c.Type == "urn:google:picture"))
+                //{
+                //    await _userManager.AddClaimAsync(user,
+                //        info.Principal.FindFirst("urn:google:picture"));
+                //}
+
                 //await HttpContext.SignInAsync(new ClaimsPrincipal());
                 await HttpContext.SignInAsync(principal);
 
