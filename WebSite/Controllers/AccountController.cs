@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using WebSite.Models;
+using WebSite.Services;
 
 namespace WebSite.Controllers
 {
@@ -16,7 +17,18 @@ namespace WebSite.Controllers
         //{
         //    return View();
         //}
-
+        private readonly SiteService _siteService;
+        public AccountController(SiteService siteService)
+        {
+            _siteService = siteService;
+        }
+        [HttpGet, HttpPost]
+        public async Task<IActionResult> SetLanguage(string culture, string returnUrl)
+        {
+            await Task.Yield();
+            _siteService.SetCulture(culture);
+            return Redirect(returnUrl);
+        }
         [HttpGet]
         public async Task<IActionResult> Signin(string returnUrl)
         {
@@ -85,20 +97,18 @@ namespace WebSite.Controllers
                 //    await _userManager.AddClaimAsync(user,
                 //        info.Principal.FindFirst(ClaimTypes.GivenName));
                 //}
-
                 //if (info.Principal.HasClaim(c => c.Type == "urn:google:locale"))
                 //{
                 //    await _userManager.AddClaimAsync(user,
                 //        info.Principal.FindFirst("urn:google:locale"));
                 //}
-
                 //if (info.Principal.HasClaim(c => c.Type == "urn:google:picture"))
                 //{
                 //    await _userManager.AddClaimAsync(user,
                 //        info.Principal.FindFirst("urn:google:picture"));
                 //}
-
                 //await HttpContext.SignInAsync(new ClaimsPrincipal());
+
                 await HttpContext.SignInAsync(principal);
 
                 //沒有指定返回的頁面就導向 /Home/Index

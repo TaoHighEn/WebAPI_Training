@@ -38,7 +38,6 @@ namespace WebSite
                 options.UseSqlite(Configuration.GetConnectionString("WebsiteDB"));
             });
             //註冊
-
             services.AddControllersWithViews();
 
             //多國語系
@@ -69,6 +68,8 @@ namespace WebSite
                 //有效時間
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
             });
+            
+            services.AddHttpContextAccessor();
             //註冊服務
             services.AddScoped<SiteService>();
         }
@@ -110,6 +111,7 @@ namespace WebSite
             }
 
             app.UseRouting();
+
             //先驗證
             app.UseAuthentication();
             //再授權

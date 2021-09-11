@@ -28,11 +28,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="../assets/css/theme.min.css">
-    <title>Sign In | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>
+    @*<link rel="stylesheet" href="../assets/css/theme.min.css">
+    <title>Sign In | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>*@
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/theme.min.css")">
+    <title>Homepage | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>
+
+    <link rel="stylesheet" href="@Url.Content("~/lib/site/main.css")">
+    <!-- Theme JS -->
+    <script src="@Url.Content("/assets/js/theme.min.js")"></script>
+
+    <script src="@Url.Content("~/lib/site/main.js")"></script>
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="navbar-classic navbar navbar-expand-lg">
+        <!--Navbar nav -->
+        <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
+            <li class="dropdown stopevent">
+                <vc:language></vc:language>
+            </li>
+        </ul>
+    </nav>
     <!-- container -->
     @RenderBody()
     <!-- Scripts -->

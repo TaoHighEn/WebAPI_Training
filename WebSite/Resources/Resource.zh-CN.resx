@@ -117,16 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="en-US" xml:space="preserve">
+    <value>英文</value>
+  </data>
   <data name="User.Account" xml:space="preserve">
     <value>账号</value>
   </data>
   <data name="User.Account.Required" xml:space="preserve">
     <value>账号必填</value>
   </data>
+  <data name="User.Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
   <data name="User.Password.Required" xml:space="preserve">
     <value>密码必填</value>
   </data>
-  <data name="Uuser.Password" xml:space="preserve">
-    <value>密码</value>
+  <data name="zh-CN" xml:space="preserve">
+    <value>簡体中文</value>
+  </data>
+  <data name="zh-TW" xml:space="preserve">
+    <value>繁体中文</value>
   </data>
 </root>
