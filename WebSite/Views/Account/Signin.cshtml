@@ -1,9 +1,6 @@
-﻿
-@model SigninViewModel
+﻿@model SigninViewModel
 
-@{
-    Layout = "_LayoutNoAuth";
-}
+@{ Layout = "_LayoutNoAuth"; }
 
 <div class="container d-flex flex-column">
     <div class="row align-items-center justify-content-center g-0
@@ -14,65 +11,46 @@
                 <!-- Card body -->
                 <div class="card-body p-6">
                     <div class="mb-4">
-                        <a href="/"><img src="../assets/images/brand/logo/logo-primary.svg" class="mb-2" alt="農寶寶"></a>
-                        <p class="mb-6">請輸入帳號/密碼進行登入</p>
+                        <a href="/Home/Index"><img src="@Url.Content("~/assets/images/brand/logo/logo-primary.svg")" class="mb-2" alt=""></a>
+                        <p class="mb-6">@_localizer["EnterUserInformation"]</p>
                     </div>
                     <!-- Form -->
                     <form asp-controller="Account" asp-action="Signin" method="post">
-
                         <input type="hidden" asp-for="ReturnUrl" />
                         <input type="hidden" asp-for="ErrorMessage" />
                         <span asp-validation-for="ErrorMessage" class="text-danger"></span>
-
                         <!-- Username -->
                         <div class="mb-3">
                             <label asp-for="Account" class="form-label"></label>
                             <input asp-for="Account" type="text" class="form-control" placeholder="請輸入帳號...">
                             <span asp-validation-for="Account" class="text-danger"></span>
-                            @*<label for="email" class="form-label">Username or email</label>
-                                <input type="email" id="email" class="form-control" name="email" placeholder="Email address here" required="">*@
                         </div>
                         <!-- Password -->
                         <div class="mb-3">
                             <label asp-for="Password" class="form-label"></label>
                             <input type="password" asp-for="Password" class="form-control" placeholder="請輸入密碼...">
                             <span asp-validation-for="Password" class="text-danger"></span>
-                            @*<label for="password" class="form-label">Password</label>
-                                <input type="password" id="password" class="form-control" name="password" placeholder="**************" required="">*@
                         </div>
-                        <!-- Checkbox -->
-                        @*<div class="d-lg-flex justify-content-between align-items-centermb-4">
-                                <div class="form-check custom-checkbox">
-                                    <input type="checkbox" class="form-check-input" id="rememberme">
-                                    <label class="form-check-label" for="rememberme">
-                                        Remember
-                                        me
-                                    </label>
-                                </div>
-                            </div>*@
+
                         <div>
                             <!-- Button -->
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary">
-                                    登入
+                                    @_localizer["Signin"]
                                 </button>
                             </div>
 
                             <div class="d-md-flex justify-content-between mt-4">
                                 <div class="mb-2 mb-md-0">
-                                    <a href="sign-up.html" class="fs-5">
-                                        建立帳號
+                                    <a href="/Account/Signup" class="fs-5">
+                                        @_localizer["CreateAccount"]
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="forget-password.html" class="text-inherit
-                        fs-5">忘記密碼？</a>
+                                    <a href="/Account/ForgotPassword" class="text-inherit fs-5">@_localizer["ForgotPassword"]</a>
                                 </div>
-
                             </div>
                         </div>
-
-
                     </form>
                 </div>
             </div>

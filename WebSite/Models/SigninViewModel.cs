@@ -10,13 +10,11 @@ namespace WebSite.Models
     public class SigninViewModel
     {
         [Display(Name = "User.Account")]
-        [Required(ErrorMessage = "帳號必填")]
+        [Required(ErrorMessage = "User.Account_Required")]
         public string Account { get; set; }
-
         [Display(Name = "User.Password")]
-        [Required(ErrorMessage = "密碼必填")]
+        [Required(ErrorMessage = "User.Password_Required")]
         public string Password { get; set; }
-
         public string ReturnUrl { get; set; }
         public string ErrorMessage { get; set; }
     }

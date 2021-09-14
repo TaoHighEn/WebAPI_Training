@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using WebSite.Models.WebSiteDB;
 
 namespace WebSite.Services
@@ -10,11 +13,13 @@ namespace WebSite.Services
     {
         private readonly WebsiteDBContext _webSiteDBContext;
         private readonly IHttpContextAccessor _context;
+        private readonly IConfiguration _configuration;
 
-        public SiteService(WebsiteDBContext webSiteDBContext, IHttpContextAccessor context)
+        public SiteService(WebsiteDBContext webSiteDBContext, IHttpContextAccessor context, IConfiguration configuration)
         {
             _webSiteDBContext = webSiteDBContext;
             _context = context;
+            _configuration = configuration;
         }
 
         /// <summary>
@@ -70,6 +75,22 @@ namespace WebSite.Services
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
+        }
+
+        /// <summary>
+        /// 字串加密
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public string EncoderSHA512(string input)
+        {
+            string salt = _configuration.GetValue<string>("Salt");
+            string output = string.Empty;
+            using (SHA512CryptoServiceProvider csp = new())
+            {
+                output = BitConverter.ToString(csp.ComputeHash(Encoding.UTF8.GetBytes(salt + input))).Replace("-", string.Empty);
+            }
+            return output;
         }
     }
 }

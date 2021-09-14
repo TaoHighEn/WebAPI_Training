@@ -18,11 +18,24 @@ namespace WebSite.Models.WebSiteDB
         {
         }
 
+        public virtual DbSet<ForgotPassword> ForgotPassword { get; set; }
         public virtual DbSet<Language> Language { get; set; }
         public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ForgotPassword>(entity =>
+            {
+                entity.Property(e => e.ExpiryDateTime).IsRequired();
+
+                entity.Property(e => e.UserID).IsRequired();
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.ForgotPassword)
+                    .HasForeignKey(d => d.UserID)
+                    .OnDelete(DeleteBehavior.ClientSetNull);
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.Property(e => e.Account).IsRequired();

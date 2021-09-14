@@ -8,11 +8,18 @@ namespace WebSite.Models.WebSiteDB
 {
     public partial class User
     {
+        public User()
+        {
+            ForgotPassword = new HashSet<ForgotPassword>();
+        }
+
         public string ID { get; set; }
         public string Account { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
         public string Name { get; set; }
         public string Birthday { get; set; }
+
+        public virtual ICollection<ForgotPassword> ForgotPassword { get; set; }
     }
 }

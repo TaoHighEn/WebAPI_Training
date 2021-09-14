@@ -72,6 +72,9 @@ namespace WebSite
             services.AddHttpContextAccessor();
             //µù¥UªA°È
             services.AddScoped<SiteService>();
+            services.AddScoped<ValidatorService>();
+            services.AddScoped<IViewRenderService, ViewRenderService>();
+            services.AddScoped<EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

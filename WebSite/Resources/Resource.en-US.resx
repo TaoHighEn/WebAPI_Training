@@ -117,8 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Create Account</value>
+  </data>
   <data name="en-US" xml:space="preserve">
     <value>English</value>
+  </data>
+  <data name="EnterUserInformation" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="ForgotPasswordInformation" xml:space="preserve">
+    <value>Find Password Back</value>
+  </data>
+  <data name="HaveAccount" xml:space="preserve">
+    <value>I Have Account</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Invalid Email</value>
+  </data>
+  <data name="LanguageSetting" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="PasswordNotMatch" xml:space="preserve">
+    <value>Password Not Match</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="SentEmail" xml:space="preserve">
+    <value>Sent Authentication Email</value>
+  </data>
+  <data name="Signin" xml:space="preserve">
+    <value>Sign In</value>
   </data>
   <data name="User.Account" xml:space="preserve">
     <value>Account</value>
@@ -126,11 +159,47 @@
   <data name="User.Account.Required" xml:space="preserve">
     <value>Account  Required</value>
   </data>
+  <data name="User.Account_Placeholder" xml:space="preserve">
+    <value>Enter Account</value>
+  </data>
+  <data name="User.Birthday" xml:space="preserve">
+    <value>User Birthday</value>
+  </data>
+  <data name="User.ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="User.ConfirmPassword_Placeholder" xml:space="preserve">
+    <value>Enter Confirm Password</value>
+  </data>
+  <data name="User.ConfirmPassword_Required" xml:space="preserve">
+    <value>Password Required</value>
+  </data>
+  <data name="User.Email" xml:space="preserve">
+    <value>User Email</value>
+  </data>
+  <data name="User.Email_Placeholder" xml:space="preserve">
+    <value>Please Enter Your Email</value>
+  </data>
+  <data name="User.Email_Required" xml:space="preserve">
+    <value>Email Required</value>
+  </data>
+  <data name="User.Name" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="User.Name_Placeholder" xml:space="preserve">
+    <value>Enter User Name</value>
+  </data>
   <data name="User.Password" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="User.Password.Required" xml:space="preserve">
     <value>Password  Required</value>
+  </data>
+  <data name="User.Password_Placeholder" xml:space="preserve">
+    <value>Enter Password</value>
+  </data>
+  <data name="User.Password_RegexError" xml:space="preserve">
+    <value>Error Email</value>
   </data>
   <data name="zh-CN" xml:space="preserve">
     <value>Simplified Chinese</value>

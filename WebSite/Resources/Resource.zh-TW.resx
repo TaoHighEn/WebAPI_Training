@@ -117,8 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>建立帳號</value>
+  </data>
   <data name="en-US" xml:space="preserve">
     <value>英文</value>
+  </data>
+  <data name="EnterUserInformation" xml:space="preserve">
+    <value>請輸入使用者資訊</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>忘記密碼</value>
+  </data>
+  <data name="ForgotPasswordInformation" xml:space="preserve">
+    <value>找回密碼</value>
+  </data>
+  <data name="HaveAccount" xml:space="preserve">
+    <value>已有帳號</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Email格式錯誤</value>
+  </data>
+  <data name="LanguageSetting" xml:space="preserve">
+    <value>語言選擇</value>
+  </data>
+  <data name="PasswordNotMatch" xml:space="preserve">
+    <value>密碼不一致</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>重設密碼</value>
+  </data>
+  <data name="SentEmail" xml:space="preserve">
+    <value>認證信已寄出</value>
+  </data>
+  <data name="Signin" xml:space="preserve">
+    <value>登入</value>
   </data>
   <data name="User.Account" xml:space="preserve">
     <value>帳號</value>
@@ -126,11 +159,47 @@
   <data name="User.Account.Required" xml:space="preserve">
     <value>帳號必填</value>
   </data>
+  <data name="User.Account_Placeholder" xml:space="preserve">
+    <value>請輸入帳號</value>
+  </data>
+  <data name="User.Birthday" xml:space="preserve">
+    <value>使用者生日</value>
+  </data>
+  <data name="User.ConfirmPassword" xml:space="preserve">
+    <value>請再輸入密碼</value>
+  </data>
+  <data name="User.ConfirmPassword_Placeholder" xml:space="preserve">
+    <value>請再輸入密碼</value>
+  </data>
+  <data name="User.ConfirmPassword_Required" xml:space="preserve">
+    <value>請再輸入密碼必填</value>
+  </data>
+  <data name="User.Email" xml:space="preserve">
+    <value>使用者Email</value>
+  </data>
+  <data name="User.Email_Placeholder" xml:space="preserve">
+    <value>請輸入Email</value>
+  </data>
+  <data name="User.Email_Required" xml:space="preserve">
+    <value>Email必填</value>
+  </data>
+  <data name="User.Name" xml:space="preserve">
+    <value>使用者名稱</value>
+  </data>
+  <data name="User.Name_Placeholder" xml:space="preserve">
+    <value>請輸入使用者名稱</value>
+  </data>
   <data name="User.Password" xml:space="preserve">
     <value>密碼</value>
   </data>
   <data name="User.Password.Required" xml:space="preserve">
     <value>密碼必填</value>
+  </data>
+  <data name="User.Password_Placeholder" xml:space="preserve">
+    <value>請輸入密碼</value>
+  </data>
+  <data name="User.Password_RegexError" xml:space="preserve">
+    <value>Email格式錯誤</value>
   </data>
   <data name="zh-CN" xml:space="preserve">
     <value>簡體中文</value>

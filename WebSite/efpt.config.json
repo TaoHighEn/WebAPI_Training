@@ -20,9 +20,13 @@
       {
          "Name": "Language",
          "ObjectType": 0
+      },
+      {
+         "Name": "ForgotPassword",
+         "ObjectType": 0
       }
    ],
-   "UiHint": "WebSite",
+   "UiHint": "WebSiteDB",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": true,
    "UseDbContextSplitting": false,
