@@ -148,6 +148,7 @@ namespace WebSite.Controllers
                     throw new Exception(errors.First().Errors.First().ErrorMessage);
                 }
 
+                //Guid全域唯一識別碼
                 model.User.ID = Guid.NewGuid().ToString().ToUpper();
                 model.User.Account = model.User.Account.Trim();
                 model.User.Password = _siteService.EncoderSHA512(model.User.Password);
